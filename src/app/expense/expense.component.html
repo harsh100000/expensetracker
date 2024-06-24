@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="balence">
+        <h1>Your Balance: ${{balence}}</h1>
+    </div>
+
+    <div class="income_expense">
+        <div class="income">
+            <h2>Income</h2>
+            <h2 id="income">${{income}}</h2>
+        </div>
+        <div class="expense">
+            <h2>Expense</h2>
+            <h2 id="expense">${{expense}}</h2>
+        </div>
+    </div>
+    <div class="transactions">
+        <div class="teansaction_text">
+            <h3>Transaction records</h3>
+        </div>
+        <div class="clear_transaction">
+            <button type="button" class="btn btn-primary btn-sm" (click)="clearAllTransactions()">Clear Transactions</button>
+        </div>
+    </div>
+    <div class="transaction_list">
+        <div class="transaction">
+            <ul>
+                <li *ngFor="let transaction of allTransactions; let i = index" >
+                    {{transaction.title}} {{transaction.amount}}
+                    <button type="button" (click)="deleteTransaction(i)" class="btn btn-danger btn-sm">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="inputs">
+        <div class="income_input">
+            <input class="c" type="text" [(ngModel)]="transactionTitle" placeholder="Add income"><br>
+            <input class="c number-to-text" type="number" [(ngModel)]="amount" placeholder="Add amount"><br>
+            <button type="button" class="c btn btn-success" (click)="createTransaction()" >Submit</button>
+        </div>
+        <div class="expense_input">
+            <input class="c" type="text" [(ngModel)]="transactionTitle2" placeholder="Add expense"><br>
+            <input class="c number-to-text" type="number" [(ngModel)]="amount2" placeholder="Add amount"><br>
+            <button type="button" class="c btn btn-danger" (click)="createTransaction2()">Submit</button>
+        </div>
+    </div>
+</div>

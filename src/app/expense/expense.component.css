@@ -1,0 +1,79 @@
+
+.container {
+    width: 85vh;
+    height: 85vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    
+}
+
+.balence{
+    height: 10vh;
+    display: inline-block;
+}
+.income_expense{
+    display: flex;
+    flex-direction: row;
+    width: 85vh;
+    justify-content: space-evenly;
+}
+.income{
+    height: 20vh;
+}
+#income{
+    color: green;
+}
+.expense{
+    height: 20vh;
+}
+#expense{
+    color: red;
+}
+.transactions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 85vh;
+    justify-content: space-around;
+}
+.transaction_list{
+    display: flex;
+    flex-direction: row;
+}
+.transaction{
+    width: 35vw;
+}
+.inputs{
+    position: relative;
+    bottom: -98px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85vh;
+    align-items:center;
+    height:20vh;
+}
+.income_input{
+    margin: 10px;
+}
+.expense_input{
+    margin: 10px;
+}
+.c{
+    margin-top: 10px;
+}
+.btn{
+    border-radius: 20px;
+}
+input.number-to-text::-webkit-outer-spin-button,
+input.number-to-text::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
